@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="10.835">
-<testcase classname="Test amazon product page" name="Verify if product features are visible for second highest priced Samsung TV" time="10.591">
-<system-out><![CDATA[Given I open the URL........................................................passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="12.597">
+    <testcase classname="Test amazon product page" name="Verify if product features are visible for second highest priced Samsung TV" time="12.545">
+        <system-out><![CDATA[Given I open the URL........................................................passed
 When I click on Search input box............................................passed
 And I search for item.......................................................passed
 And I click on second item link.............................................passed
 When I click on Add to Cart button..........................................passed
 Then TV should be added in the cart.........................................passed
 ]]></system-out>
-</testcase>
+    </testcase>
 </testsuite>

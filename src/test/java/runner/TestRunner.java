@@ -10,7 +10,8 @@ import org.junit.runner.RunWith;
         glue="StepDef",
         plugin = {"pretty", "json:target/cucumber-reports/report.json",
                 "junit:target/cucumber-reports/report.xml",
-                "html:target/cucumber-reports/report.html" },
+                "html:target/cucumber-reports/report.html" ,
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
         monochrome = true,
         tags="@smoketest"
 )
