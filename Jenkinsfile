@@ -27,7 +27,6 @@ pipeline
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     git 'https://github.com/kkonica/PlaywrightFramework'
                     sh "mvn clean install"
-"
 
                 }
             }
