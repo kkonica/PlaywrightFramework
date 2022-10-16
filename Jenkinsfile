@@ -26,7 +26,8 @@ pipeline
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     git 'https://github.com/kkonica/PlaywrightFramework'
-                    sh "mvn clean test"
+                    sh "mvn test -Dcucumber.filter.tags="@smoketest"
+"
 
                 }
             }
