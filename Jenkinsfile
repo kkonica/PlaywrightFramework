@@ -1,27 +1,11 @@
-pipeline
-{
+pipeline {
     agent any
 
-    tools{
-    	maven 'maven'
-        }
-
-    stages
-    {
-        stage('Build')
-        {
-            steps{
-                echo("Build")
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
             }
         }
-
-
-
-        stage("Deploy to QA"){
-            steps{
-                echo("deploy to qa")
-            }
-        }
-
     }
 }
