@@ -25,7 +25,6 @@ pipeline
         stage('Regression Automation Test') {
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                    git 'https://github.com/kkonica/PlaywrightFramework'
                     sh "mvn test"
 
                 }
