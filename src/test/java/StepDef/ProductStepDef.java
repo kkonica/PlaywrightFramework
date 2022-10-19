@@ -22,4 +22,8 @@ public class ProductStepDef {
         product.verifyIfItemIsAddedInCart();
     }
 
+    @Then("TV should be added in the cart invalid")
+    public void tv_should_be_added_in_the_cart_invalid() {
+        product.verifyIfItemIsAddedInCartInvalid();
+    }
 }

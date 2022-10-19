@@ -43,4 +43,9 @@ public class ProductPage {
         System.out.println(popup.locator(cartItemText).textContent());
         assertThat(popup.locator(cartItemText)).containsText("Added");
     }
+
+    public void verifyIfItemIsAddedInCartInvalid(){
+        System.out.println(popup.locator(cartItemText).textContent());
+        assertThat(popup.locator(cartItemText)).containsText("Home");
+    }
 }
