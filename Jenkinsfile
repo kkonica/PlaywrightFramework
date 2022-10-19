@@ -26,7 +26,7 @@ pipeline
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     git 'https://github.com/kkonica/PlaywrightFramework'
-                    sh "mvn -B package --file pom.xml"
+                    sh "mvn test"
 
                 }
             }
