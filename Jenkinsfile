@@ -33,13 +33,7 @@ pipeline
 
             stage('Publish Extent Report'){
                         steps{
-                                 publishHTML([allowMissing: false,
-                                              alwaysLinkToLastBuild: false,
-                                              keepAll: true,
-                                              reportDir: 'test-output/htmlReports/',
-                                              reportFiles: 'automation-report.html',
-                                              reportName: 'HTML Extent Report',
-                                              reportTitles: ''])
+                                 publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'test-output/htmlReports/', reportFiles: 'automation-report.html', reportName: 'HTML Extent Report', reportTitles: '', useWrapperFileDirectly: true])
                         }
             }
     }
