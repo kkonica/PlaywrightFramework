@@ -26,7 +26,7 @@ public class ServiceHooks {
                     .setFullPage(true));
 
             String base64Path= Base64.getEncoder().encodeToString(screenshot);
-            scenario.attach(base64Path, base64Path, scenario.getName());
+            scenario.attach(base64Path, "image/png", scenario.getName());
         }
         DriverUtils.getPage().context().browser().close();
     }
