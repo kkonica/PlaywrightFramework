@@ -1,5 +1,6 @@
 package StepDef;
 
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.microsoft.playwright.Page;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -19,13 +20,14 @@ public class ServiceHooks {
     @After
     public void afterScenario(Scenario scenario){
         if(scenario.isFailed()){
+            String path = System.getProperty("user.dir")+"/screenshots/"+System.currentTimeMillis()+".png";
             byte[] screenshot;
             screenshot= DriverUtils.getPage().screenshot(new Page.ScreenshotOptions()
-                    .setPath(Paths.get("screenshot.png"))
+                    .setPath(Paths.get(path))
                     .setFullPage(true));
 
             String base64Path= Base64.getEncoder().encodeToString(screenshot);
-            scenario.attach(base64Path, "image/png", scenario.getName());
+            scenario.attach(base64Path, String.valueOf(MediaEntityBuilder.createScreenCaptureFromBase64String(base64Path,scenario.getName())),scenario.getName());
         }
         DriverUtils.getPage().context().browser().close();
     }
