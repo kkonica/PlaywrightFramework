@@ -7,6 +7,7 @@ import io.cucumber.java.Scenario;
 import utils.DriverUtils;
 
 import java.nio.file.Paths;
+import java.util.Base64;
 
 public class ServiceHooks {
 
@@ -23,8 +24,8 @@ public class ServiceHooks {
                     .setPath(Paths.get("screenshot.png"))
                     .setFullPage(true));
 
-
-            scenario.attach(screenshot, "image/png", scenario.getName());
+            String base64Path= Base64.getEncoder().encodeToString(screenshot);
+            scenario.attach(base64Path, "image/png", scenario.getName());
         }
         DriverUtils.getPage().context().browser().close();
     }
