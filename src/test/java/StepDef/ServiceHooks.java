@@ -1,5 +1,6 @@
 package StepDef;
 
+import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter;
 import com.microsoft.playwright.Page;
 import io.cucumber.java.After;
@@ -30,8 +31,11 @@ public class ServiceHooks {
     }
     @After
     public void afterScenario(Scenario scenario) throws IOException {
-        ExtentCucumberAdapter.addTestStepScreenCaptureFromPath(captureScreenshot());
-        scenario.log("Screenshot attached");
+
+        if(scenario.isFailed()) {
+
+            scenario.attach(captureScreenshot(), "image/png", "image");
+        }
         DriverUtils.getPage().context().browser().close();
     }
 
