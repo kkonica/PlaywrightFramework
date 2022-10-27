@@ -1,6 +1,7 @@
 package StepDef;
 
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter;
 import com.microsoft.playwright.Page;
 import io.cucumber.java.After;
@@ -34,7 +35,7 @@ public class ServiceHooks {
 
         if(scenario.isFailed()) {
 
-            scenario.attach(captureScreenshot(), "image/png", scenario.getName());
+            scenario.attach(captureScreenshot(), String.valueOf(MediaEntityBuilder.createScreenCaptureFromBase64String(captureScreenshot())), scenario.getName());
             scenario.log("Screenshot captured");
         }
         DriverUtils.getPage().context().browser().close();
