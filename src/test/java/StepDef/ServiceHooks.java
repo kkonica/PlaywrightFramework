@@ -34,7 +34,8 @@ public class ServiceHooks {
 
         if(scenario.isFailed()) {
 
-            scenario.attach(captureScreenshot(), "image/png", "image");
+            scenario.attach(captureScreenshot(), "image/png", scenario.getName());
+            scenario.log("Screenshot captured");
         }
         DriverUtils.getPage().context().browser().close();
     }
