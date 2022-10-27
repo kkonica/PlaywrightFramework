@@ -1,11 +1,13 @@
 package StepDef;
 
+import com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter;
 import com.microsoft.playwright.Page;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import utils.DriverUtils;
 
+import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.Base64;
 
@@ -16,18 +18,20 @@ public class ServiceHooks {
         DriverUtils.createPage();
     }
 
-    @After
-    public void afterScenario(Scenario scenario){
-        if(scenario.isFailed()){
-            String path = System.getProperty("user.dir")+"/screenshots/"+System.currentTimeMillis()+".png";
-            byte[] screenshot;
-            screenshot= DriverUtils.getPage().screenshot(new Page.ScreenshotOptions()
-                    .setPath(Paths.get(path))
-                    .setFullPage(true));
+    public static String captureScreenshot(){
+        String path = System.getProperty("user.dir")+"/screenshots/"+System.currentTimeMillis()+".png";
+        byte[] screenshot;
+        screenshot= DriverUtils.getPage().screenshot(new Page.ScreenshotOptions()
+                .setPath(Paths.get(path))
+                .setFullPage(true));
 
-            String base64Path= Base64.getEncoder().encodeToString(screenshot);
-            scenario.attach(base64Path, "image/png", scenario.getName());
-        }
+        String base64Path= "data:image/png;base64"+ Base64.getEncoder().encodeToString(screenshot);
+        return base64Path;
+    }
+    @After
+    public void afterScenario(Scenario scenario) throws IOException {
+        ExtentCucumberAdapter.addTestStepScreenCaptureFromPath(captureScreenshot());
+        scenario.log("Screenshot attached");
         DriverUtils.getPage().context().browser().close();
     }
 
