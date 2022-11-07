@@ -12,6 +12,8 @@ public class GemfireLoginPage {
 
     String membersTab = "xpath=//button[contains(text(),'Members')]";
 
+    String membersTabInvalid = "xpath=//button[contains(text(),'a')]";
+
     String regionTab= "xpath=//button[contains(text(),'Regions')]";
     public GemfireLoginPage(Page page){
 
@@ -38,5 +40,9 @@ public class GemfireLoginPage {
     public void verifyClusterMembersAndRegionsAreVisible(){
         page.locator(membersTab).isVisible();
         page.locator(regionTab).isVisible();
+    }
+
+    public void verifyClusterMembersAndRegionsAreNotVisible(){
+        page.locator(membersTabInvalid).isVisible();
     }
 }

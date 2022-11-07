@@ -29,4 +29,9 @@ public class GemfireLoginStepDef {
     public void theUserConnectsTheLocator() {
         login.connectToCluster();
     }
+
+    @Then("cluster members and regions are not visible")
+    public void clusterMembersAndRegionsAreNotVisible() {
+        login.verifyClusterMembersAndRegionsAreNotVisible();
+    }
 }

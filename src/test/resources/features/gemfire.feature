@@ -7,3 +7,11 @@ Feature: Test gemfire UI
     Then verify if the user is logged in
     When the user connects the locator
     Then cluster members and regions are visible
+
+  @test1
+  Scenario: Login using the cluster url
+    Given the user visits gemfire app url
+    When the user enables developer mode
+    Then verify if the user is logged in
+    When the user connects the locator
+    Then cluster members and regions are not visible
