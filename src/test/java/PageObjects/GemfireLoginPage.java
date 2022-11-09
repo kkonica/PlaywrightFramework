@@ -1,6 +1,9 @@
 package PageObjects;
 
 import com.microsoft.playwright.Page;
+import org.junit.Assert;
+
+import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
 public class GemfireLoginPage {
 
@@ -8,11 +11,11 @@ public class GemfireLoginPage {
 
     String enableDevModeButton = "id=loginBtnId";
 
-    String locator1="xpath=//a[contains(text(),'locator1')]";
+    String locator1="xpath=//a[contains(text(),'locator12')]";
 
     String membersTab = "xpath=//button[contains(text(),'Members')]";
 
-    String membersTabInvalid = "xpath=//button[contains(text(),'a')]";
+    String memberDetails = "xpath=//section[@id=\"clr-tab-content-0\"]/app-cluster-member-details";
 
     String regionTab= "xpath=//button[contains(text(),'Regions')]";
     public GemfireLoginPage(Page page){
@@ -40,9 +43,14 @@ public class GemfireLoginPage {
     public void verifyClusterMembersAndRegionsAreVisible(){
         page.locator(membersTab).isVisible();
         page.locator(regionTab).isVisible();
+
+        page.locator(memberDetails).isVisible();
+        assertThat(page.locator(memberDetails)).isVisible();
     }
 
     public void verifyClusterMembersAndRegionsAreNotVisible(){
-        page.locator(membersTabInvalid).isVisible();
+        page.locator(memberDetails).isVisible();
+        assertThat(page.locator(memberDetails)).isVisible();
+        assertThat(page.locator("kk")).isVisible();
     }
 }

@@ -8,7 +8,7 @@ Feature: Test gemfire UI
     When the user connects the locator
     Then cluster members and regions are visible
 
-  @test1
+  @test
   Scenario: Login using the cluster url
     Given the user visits gemfire app url
     When the user enables developer mode

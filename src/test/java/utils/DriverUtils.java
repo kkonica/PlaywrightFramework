@@ -2,6 +2,7 @@ package utils;
 
 
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.assertions.PlaywrightAssertions;
 
 public abstract class DriverUtils {
 
@@ -15,6 +16,7 @@ public abstract class DriverUtils {
 
 	public static Page createPage() {
 		page = pf.initBrowser();
+		PlaywrightAssertions.setDefaultAssertionTimeout(30000);
 		return page;
 	}
 	public static Page getPage() {

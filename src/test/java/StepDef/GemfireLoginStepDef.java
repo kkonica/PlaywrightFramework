@@ -13,7 +13,7 @@ public class GemfireLoginStepDef {
     }
     @When("the user enables developer mode")
     public void the_user_enables_developer_mode() {
-        login.enableDevMode();
+        //login.enableDevMode();
     }
     @Then("verify if the user is logged in")
     public void verify_if_the_user_is_logged_in() {
