@@ -1,4 +1,4 @@
-# gemfire-ui-automation
+# Playwright-ui-automation
 In this framework I have used Playwright as an automation tool and Cucumber as BDD tool
 POM is the design pattern followed.
 For reporting we are using Extent reports.
