@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Test Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Nov 10, 2022 09:58:10 PM</span></a>
+<a href="#"><span class="badge badge-primary">Nov 18, 2022 05:18:07 PM</span></a>
 </li>
 </ul>
 </div>
@@ -84,7 +84,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@test</a>
+<a class="dropdown-item" href="#">@smoketest</a>
 </ul>
 </li>
 </ul>
@@ -95,9 +95,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Test gemfire UI</p>
+            <p class="name">Test amazon product page</p>
             <p class="text-sm">
-              <span>9:58:11 PM</span> / <span>00:00:40:196</span>
+              <span>5:18:08 PM</span> / <span>00:00:31:081</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -105,10 +105,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Test gemfire UI</h5>
-<span class='badge badge-success'>11.10.2022 9:58:11 PM</span>
-<span class='badge badge-danger'>11.10.2022 9:58:51 PM</span>
-<span class='badge badge-default'>00:00:40:196</span>
+<h5 class="test-status text-fail">Test amazon product page</h5>
+<span class='badge badge-success'>11.18.2022 5:18:08 PM</span>
+<span class='badge badge-danger'>11.18.2022 5:18:39 PM</span>
+<span class='badge badge-default'>00:00:31:081</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -120,33 +120,38 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Login using the cluster url</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Verify if product features are visible for second highest priced Samsung TV</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="StepDef.GemfireLoginStepDef.the_user_visits_gemfire_app_url()">
-                <span>Given the user visits gemfire app url</span>
+              <div class="step pass-bg" title="StepDef.HomeStepDef.i_open_the_url()">
+                <span>Given I open the URL</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="StepDef.GemfireLoginStepDef.the_user_enables_developer_mode()">
-                <span>When the user enables developer mode</span>
+              <div class="step pass-bg" title="StepDef.HomeStepDef.i_click_on_search_input_box()">
+                <span>When I click on Search input box</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="StepDef.GemfireLoginStepDef.verify_if_the_user_is_logged_in()">
-                <span>Then verify if the user is logged in</span>
+              <div class="step pass-bg" title="StepDef.HomeStepDef.i_search_for_item()">
+                <span>And I search for item</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="StepDef.GemfireLoginStepDef.theUserConnectsTheLocator()">
-                <span>When the user connects the locator</span>
+              <div class="step pass-bg" title="StepDef.ProductStepDef.i_click_on_second_item_link()">
+                <span>And I click on second item link</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="StepDef.GemfireLoginStepDef.clusterMembersAndRegionsAreVisible()">
-                <span>Then cluster members and regions are visible</span>
+              <div class="step pass-bg" title="StepDef.ProductStepDef.i_click_on_add_to_cart_button()">
+                <span>When I click on Add to Cart button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDef.ProductStepDef.tv_should_be_added_in_the_cart()">
+                <span>Then TV should be added in the cart</span>
       <div>
       </div>
               </div>
@@ -156,7 +161,7 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="10"><span class="badge log fail-bg mr-2">Fail</span>Login using the cluster url</div>
+        <div class="node" id="11"><span class="badge log fail-bg mr-2">Fail</span>Verify if product features are visible for second highest priced Samsung TV</div>
           <div class="status-avatar float-right mr-4">
             <i class="fa fa-paperclip"></i>
           </div>
@@ -164,48 +169,49 @@
     </div>
         <div class="">
           <div class="card-body">
-              <div class="step pass-bg" title="StepDef.GemfireLoginStepDef.the_user_visits_gemfire_app_url()">
-                <span>Given the user visits gemfire app url</span>
+              <div class="step pass-bg" title="StepDef.HomeStepDef.i_open_the_url()">
+                <span>Given I open the URL</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="StepDef.GemfireLoginStepDef.the_user_enables_developer_mode()">
-                <span>When the user enables developer mode</span>
+              <div class="step pass-bg" title="StepDef.HomeStepDef.i_click_on_search_input_box()">
+                <span>When I click on Search input box</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="StepDef.GemfireLoginStepDef.verify_if_the_user_is_logged_in()">
-                <span>Then verify if the user is logged in</span>
+              <div class="step pass-bg" title="StepDef.HomeStepDef.i_search_for_item()">
+                <span>And I search for item</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="StepDef.GemfireLoginStepDef.theUserConnectsTheLocator()">
-                <span>When the user connects the locator</span>
+              <div class="step pass-bg" title="StepDef.ProductStepDef.i_click_on_second_item_link()">
+                <span>And I click on second item link</span>
       <div>
       </div>
               </div>
-              <div class="step fail-bg" title="StepDef.GemfireLoginStepDef.clusterMembersAndRegionsAreNotVisible()">
-                <span>Then cluster members and regions are not visible</span>
+              <div class="step pass-bg" title="StepDef.ProductStepDef.i_click_on_add_to_cart_button()">
+                <span>When I click on Add to Cart button</span>
       <div>
-        <textarea disabled class="code-block">org.opentest4j.AssertionFailedError: Locator expected to be visible
-Call log:
-Locator.expect with timeout 30000ms
-waiting for selector "kk"
-	at com.microsoft.playwright.impl.AssertionsBase.expectImpl(AssertionsBase.java:68)
-	at com.microsoft.playwright.impl.AssertionsBase.expectImpl(AssertionsBase.java:50)
-	at com.microsoft.playwright.impl.LocatorAssertionsImpl.expectTrue(LocatorAssertionsImpl.java:338)
-	at com.microsoft.playwright.impl.LocatorAssertionsImpl.isVisible(LocatorAssertionsImpl.java:333)
-	at com.microsoft.playwright.assertions.LocatorAssertions.isVisible(LocatorAssertions.java:499)
-	at PageObjects.GemfireLoginPage.verifyClusterMembersAndRegionsAreNotVisible(GemfireLoginPage.java:54)
-	at StepDef.GemfireLoginStepDef.clusterMembersAndRegionsAreNotVisible(GemfireLoginStepDef.java:35)
-	at ✽.cluster members and regions are not visible(file:///Users/kkonica/gemfire-ui-automation/src/test/resources/features/gemfire.feature:17)
+      </div>
+              </div>
+              <div class="step fail-bg" title="StepDef.ProductStepDef.tv_should_be_added_in_the_cart_invalid()">
+                <span>Then TV should be added in the cart invalid</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at org.junit.Assert.assertFalse(Assert.java:75)
+	at PageObjects.ProductPage.verifyIfItemIsAddedInCartInvalid(ProductPage.java:51)
+	at StepDef.ProductStepDef.tv_should_be_added_in_the_cart_invalid(ProductStepDef.java:27)
+	at ?.TV should be added in the cart invalid(file:///Users/kkonica/Desktop/play/PlayDemo/src/test/resources/features/Amazon.feature:19)
 </textarea>
       
       </div>
               </div>
               <div class="step pass-bg" title="AFTER">
                 <span>StepDef.ServiceHooks.afterScenario(io.cucumber.java.Scenario)</span>
-      <div>Login using the cluster url
+      <div>Verify if product features are visible for second highest priced Samsung TV
           <div class="row mb-3"><div class="col-md-3">
 <img data-featherlight='test-output/embedded1.png' src="test-output/embedded1.png">
     
@@ -244,12 +250,12 @@ waiting for selector "kk"
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">org.opentest4j.AssertionFailedError</p>
+<p class="name">java.lang.AssertionError</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>org.opentest4j.AssertionFailedError</h4>
+<h4>java.lang.AssertionError</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -263,11 +269,11 @@ waiting for selector "kk"
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>21:58:21 PM</td>
+<td>17:18:37 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='16'>Then cluster members and regions are not visible</a>
+<a href="#" class="linked" test-id='1' id='18'>Then TV should be added in the cart invalid</a>
 <div class="">
-<span class="badge badge-default">Test gemfire UI.Login using the cluster url.Then cluster members and regions are not visible</span>
+<span class="badge badge-default">Test amazon product page.Verify if product features are visible for second highest priced Samsung TV.Then TV should be added in the cart invalid</span>
 </div>
 </td>
 </tr>
@@ -297,12 +303,12 @@ waiting for selector "kk"
 <span class='badge log pass-bg'>1</span>
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">@test</p>
+<p class="name">@smoketest</p>
 <p class="duration text-sm">2 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@test</h4>
+<h4>@smoketest</h4>
 <span status="pass" class='badge log pass-bg'>1 passed</span>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
@@ -317,21 +323,21 @@ waiting for selector "kk"
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>21:58:11 PM</td>
+<td>17:18:08 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>Login using the cluster url</a>
+<a href="#" class="linked" test-id='1' id='2'>Verify if product features are visible for second highest priced Samsung TV</a>
 <div class="">
-<span class="badge badge-default">Test gemfire UI.Login using the cluster url</span>
+<span class="badge badge-default">Test amazon product page.Verify if product features are visible for second highest priced Samsung TV</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>21:58:19 PM</td>
+<td>17:18:28 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='10'>Login using the cluster url</a>
+<a href="#" class="linked" test-id='1' id='11'>Verify if product features are visible for second highest priced Samsung TV</a>
 <div class="">
-<span class="badge badge-default">Test gemfire UI.Login using the cluster url</span>
+<span class="badge badge-default">Test amazon product page.Verify if product features are visible for second highest priced Samsung TV</span>
 </div>
 </td>
 </tr>
@@ -352,13 +358,13 @@ waiting for selector "kk"
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Nov 10, 2022 09:58:10 PM</h3>
+<h3>Nov 18, 2022 05:18:07 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Nov 10, 2022 09:58:52 PM</h3>
+<h3>Nov 18, 2022 05:18:39 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -429,9 +435,9 @@ waiting for selector "kk"
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='90%'><b>10</b> steps passed</small></div>
+<div><small data-tooltip='92%'><b>12</b> steps passed</small></div>
 <div>
-<small data-tooltip='9%'><b>1</b> steps failed,
+<small data-tooltip='7%'><b>1</b> steps failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -448,7 +454,7 @@ waiting for selector "kk"
 </div></div>
 <script>
 var timeline = {
-"Test gemfire UI":40.196
+"Test amazon product page":31.081
 };
 </script>
 <div class="row">
@@ -458,7 +464,7 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@test</td>
+<td>@smoketest</td>
 <td>1</td>
 <td>1</td>
 <td>0</td>
@@ -485,7 +491,7 @@ warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 10,
+passGrandChild: 12,
 failGrandChild: 1,
 warningGrandChild: 0,
 skipGrandChild: 0,

@@ -1,9 +1,8 @@
 package PageObjects;
 
 import com.microsoft.playwright.BrowserContext;
+import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import org.junit.Assert;
 import utils.PlaywrightFactory;
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
@@ -41,11 +40,15 @@ public class ProductPage {
 
     public void verifyIfItemIsAddedInCart(){
         System.out.println(popup.locator(cartItemText).textContent());
-        assertThat(popup.locator(cartItemText)).containsText("Added");
+        Locator d = popup.locator(cartItemText);
+        Assert.assertTrue(d.isVisible());
+
     }
 
     public void verifyIfItemIsAddedInCartInvalid(){
         System.out.println(popup.locator(cartItemText).textContent());
-        assertThat(popup.locator(cartItemText)).containsText("Home");
+        Locator d = popup.locator(cartItemText);
+        Assert.assertFalse(d.isVisible());
+
     }
 }
